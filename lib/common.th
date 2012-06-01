@@ -10,6 +10,7 @@
 #define ret                 pop(p)
 #define prologue            f <- p - . ; o <- -1
 #define not(Reg)            Reg ^~ a
+#define retnz(Reg)          n <- Reg == a ; n <- n & 2 ; p <- p + n + 1 ; pop(p)
 
 #endif
 
