@@ -1,0 +1,19 @@
+#include "common.th"
+
+.global factorial
+
+// Computes C! and stores it in B.
+factorial:
+  b <- 1
+  
+loop:
+  k <- c == a
+  jnzrel(k, done)
+  
+  b <- b * c
+  c <- c - 1
+  
+  goto(loop)
+
+done:
+  ret
